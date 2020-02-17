@@ -132,5 +132,9 @@ n_inputs = len(dataset[0]) - 1
 n_outputs = len(set([row[-1] for row in dataset]))
 network = initialize_network(n_inputs, 2, n_outputs)
 train_network(network, dataset, 0.5, 20, n_outputs)
-for layer in network:
-    print(layer)
+
+
+# Make a prediction with a network
+def predict(network, row):
+    outputs = forward_propagate(network, row)
+    return outputs.index(max(outputs))
