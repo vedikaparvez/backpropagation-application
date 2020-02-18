@@ -5,6 +5,18 @@ from random import random
 from csv import reader
 from math import exp
 
+# Load a CSV file
+
+
+def load_csv(seeds_dataset.csv):
+    dataset = list()
+    with open(seeds_dataset.csv, 'r') as file:
+        csv_reader = reader(file)
+        for row in csv_reader:
+            if not row:
+                continue
+            dataset.append(row)
+    return dataset
 
 # Initializing a network
 
