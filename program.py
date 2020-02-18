@@ -18,6 +18,13 @@ def load_csv(seeds_dataset.csv):
             dataset.append(row)
     return dataset
 
+# Convert string column to float
+
+
+def str_column_to_float(dataset, column):
+    for row in dataset:
+        row[column] = float(row[column].strip())
+
 # Initializing a network
 
 
