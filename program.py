@@ -1,6 +1,10 @@
+# Backprop on the Seeds Dataset
 from random import seed
+from random import randrange
 from random import random
+from csv import reader
 from math import exp
+
 
 # Initializing a network
 
