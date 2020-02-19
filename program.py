@@ -46,6 +46,14 @@ def dataset_minmax(dataset):
     stats = [[min(column), max(column)] for column in zip(*dataset)]
     return stats
 
+# Rescale dataset columns to the range 0-1
+
+
+def normalize_dataset(dataset, minmax):
+    for row in dataset:
+        for i in range(len(row)-1):
+            row[i] = (row[i] - minmax[i][0]) / (minmax[i][1] - minmax[i][0])
+
 # Initializing a network
 
 
