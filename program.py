@@ -38,6 +38,14 @@ def str_column_to_int(dataset, column):
         row[column] = lookup[row[column]]
     return lookup
 
+# Find the min and max values for each column
+
+
+def dataset_minmax(dataset):
+    minmax = list()
+    stats = [[min(column), max(column)] for column in zip(*dataset)]
+    return stats
+
 # Initializing a network
 
 
