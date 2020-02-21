@@ -99,6 +99,16 @@ def evaluate_algorithm(dataset, algorithm, n_folds, *args):
         scores.append(accuracy)
     return scores
 
+# Calculate neuron activation for an input
+
+
+def activate(weights, inputs):
+    activation = weights[-1]
+    for i in range(len(weights)-1):
+        activation += weights[i] * inputs[i]
+    return activation
+
+
 # Initializing a network
 
 
